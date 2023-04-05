@@ -2,6 +2,7 @@
 /* Estilos SASS */
 /* Anidando */
 /* Diseño de páginas hecho con Grids */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap");
 .contenedor {
   width: 100%;
   max-width: 2000px;
@@ -137,4 +138,10 @@ h1 {
   width: 50vw;
   height: 50vh;
   background-image: radial-gradient(ellipse, red, yellow, blue);
+  transition: all 1s;
+}
+
+.prueba:hover {
+  transform: skew(20deg, 10deg);
+  rotate: 50deg;
 }/*# sourceMappingURL=styles.css.map */
