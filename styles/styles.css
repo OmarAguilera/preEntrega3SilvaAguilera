@@ -36,26 +36,6 @@
   grid-area: footer;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #96aedd;
-  color: #000;
-}
-
-h1 {
-  margin-bottom: 20px;
-  margin-left: 50px;
-}
-
-p {
-  margin-left: 20px;
-}
-
 /* Pisado de Bootstrap */
 .logobanner {
   height: 150px;
@@ -69,28 +49,6 @@ p {
   background-color: #23315e;
 }
 
-/* Diseño de páginas hecho con Grids */
-.contenedor > div,
-.contenedor .contenido .contenedor .sidebar .contenedor .footer {
-  background: #fff;
-  padding: 20px;
-  border-radius: 4px;
-}
-
-footer {
-  background: #23315e;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Responsive disposición de páginas*/
-@media screen and (max-width: 768px) {
-  .contenedor {
-    grid-template-areas: "header header header" "contenido contenido contenido" "sidebar sidebar sidebar" "footer footer footer";
-  }
-}
 /* CSS de la galería (hecha con Flexbox)*/
 .gallery {
   width: 100%;
@@ -127,5 +85,49 @@ footer {
 @media (max-width: 600px) {
   .columna {
     flex: 100%;
+  }
+}
+footer {
+  background: #23315e;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Aplicando mixin */
+body {
+  background: #96aedd;
+  color: white;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  margin-left: 50px;
+  color: white;
+  font-size: 90px;
+  margin-left: 20px;
+}
+
+/* Diseño de páginas hecho con Grids */
+.contenedor > div,
+.contenedor .contenido .contenedor .sidebar .contenedor .footer {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+/* Responsive disposición de páginas*/
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-areas: "header header header" "contenido contenido contenido" "sidebar sidebar sidebar" "footer footer footer";
   }
 }/*# sourceMappingURL=styles.css.map */

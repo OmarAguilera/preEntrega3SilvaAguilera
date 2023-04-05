@@ -1,0 +1,49 @@
+/* CSS de la galería (hecha con Flexbox)*/
+
+.gallery {
+    width: 100%;
+    border: 5px groove #23315e;
+}
+
+.fila {
+    display: flex;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.columna {
+    flex: 25%;
+    
+    .gallery {
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        object-fit: cover;
+    }
+}
+
+/* Media Queries adicionales (para la galería) */
+
+@media (max-width: 1000px){
+    .columna{
+        flex: 30%;
+    }
+}
+@media (max-width: 800px){
+    .columna{
+        flex: 50%;
+    }
+}
+
+@media (max-width: 600px){
+    .columna{
+        flex: 100%
+    }
+}
+
+footer {
+    background: #23315e;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

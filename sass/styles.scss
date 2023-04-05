@@ -1,0 +1,57 @@
+
+/* Estilos SASS */
+$colorFisio1: #96aedd;
+$colorFisio2: #23315e;
+
+
+@import "layoutGeneral";
+@import "bootstrap";
+@import "galeria";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Aplicando mixin */
+@mixin estiloFuente1($tamaño) {
+    color: white;
+    font-size: $tamaño;
+    margin-left: 20px;
+}
+
+body {
+    background: $colorFisio1;
+    @include estiloFuente1(30px);
+}
+
+h1 {
+    margin-bottom: 20px;
+    margin-left: 50px;
+    @include estiloFuente1(90px);
+}
+
+/* Diseño de páginas hecho con Grids */
+
+.contenedor > div,
+.contenedor .contenido
+.contenedor .sidebar
+.contenedor .footer {
+    background:#fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+
+/* Responsive disposición de páginas*/
+
+@media screen and (max-width: 768px){
+    .contenedor {
+        grid-template-areas: "header header header"
+                        "contenido contenido contenido"
+                        "sidebar sidebar sidebar"
+                        "footer footer footer";
+    }
+}
+
