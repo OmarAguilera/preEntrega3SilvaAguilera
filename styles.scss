@@ -19,9 +19,35 @@ $colorFisio2: #23315e;
                          "contenido contenido sidebar"
                          "contenido contenido sidebar"
                          "footer footer footer";
-                        
 
+                         .sidebar {
+                            grid-column: 3 / 4;
+                            background: $colorFisio2;
+                            margin-right: 20px;
+                            margin-left: 20px;
+                            display: flex;
+                            align-items: center;
+                            align-content: center;
+                            min-height: 100px;
+                            grid-area: sidebar;
                         }
+                        
+                        .contenido {
+                            grid-area: contenido;
+                        }
+
+                        .header {
+                            background: $colorFisio2;
+                            color: #fff;
+                            grid-area: header;
+                        }
+                        .footer {
+                            background: $colorFisio2;
+                            grid-area: footer;
+                            
+                        }
+
+}
 
 * {
     box-sizing: border-box;
@@ -61,40 +87,11 @@ p {
 .contenedor > div,
 .contenedor .contenido
 .contenedor .sidebar
-.contenidor .footer {
+.contenedor .footer {
     background:#fff;
     padding: 20px;
     border-radius: 4px;
 }
-
-.contenedor .header {
-    background: #23315e;
-    color: #fff;
-    grid-area: header;
-}
-
-.contenedor .contenido {
-    grid-area: contenido;
-}
-
-.contenedor .sidebar {
-    grid-column: 3 / 4;
-    background: #23315e;
-    margin-right: 20px;
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    min-height: 100px;
-    grid-area: sidebar;
-}
-
-
-.contenedor .footer {
-    background: #23315e;
-    grid-area: footer;
-}
-
 
 footer {
     background: #23315e;
@@ -130,13 +127,15 @@ footer {
 
 .columna {
     flex: 25%;
+    
+    .gallery {
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        object-fit: cover;
+    }
 }
 
-.columna .gallery {
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-    object-fit: cover;
-}
+
 
 /* Media Queries adicionales (para la galería) */
 

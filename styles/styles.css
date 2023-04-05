@@ -12,6 +12,29 @@
   grid-template-rows: repeat(4, auto);
   grid-template-areas: "header header header" "contenido contenido sidebar" "contenido contenido sidebar" "footer footer footer";
 }
+.contenedor .sidebar {
+  grid-column: 3/4;
+  background: #23315e;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  min-height: 100px;
+  grid-area: sidebar;
+}
+.contenedor .contenido {
+  grid-area: contenido;
+}
+.contenedor .header {
+  background: #23315e;
+  color: #fff;
+  grid-area: header;
+}
+.contenedor .footer {
+  background: #23315e;
+  grid-area: footer;
+}
 
 * {
   box-sizing: border-box;
@@ -48,37 +71,10 @@ p {
 
 /* Diseño de páginas hecho con Grids */
 .contenedor > div,
-.contenedor .contenido .contenedor .sidebar .contenidor .footer {
+.contenedor .contenido .contenedor .sidebar .contenedor .footer {
   background: #fff;
   padding: 20px;
   border-radius: 4px;
-}
-
-.contenedor .header {
-  background: #23315e;
-  color: #fff;
-  grid-area: header;
-}
-
-.contenedor .contenido {
-  grid-area: contenido;
-}
-
-.contenedor .sidebar {
-  grid-column: 3/4;
-  background: #23315e;
-  margin-right: 20px;
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  min-height: 100px;
-  grid-area: sidebar;
-}
-
-.contenedor .footer {
-  background: #23315e;
-  grid-area: footer;
 }
 
 footer {
@@ -110,7 +106,6 @@ footer {
 .columna {
   flex: 25%;
 }
-
 .columna .gallery {
   grid-row-gap: 20px;
   grid-column-gap: 20px;
