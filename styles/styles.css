@@ -106,15 +106,17 @@ body {
   background: #96aedd;
   color: white;
   font-size: 30px;
-  margin-left: 20px;
+}
+
+p {
+  margin-left: 40px;
 }
 
 h1 {
-  margin-bottom: 20px;
-  margin-left: 50px;
   color: white;
   font-size: 90px;
-  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
 }
 
 /* Diseño de páginas hecho con Grids */
