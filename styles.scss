@@ -1,3 +1,8 @@
+
+/* Estilos SASS */
+$colorFisio1: #96aedd;
+$colorFisio2: #23315e;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +10,7 @@
 }
 
 body {
-    background: #96aedd;
+    background: $colorFisio1;
     color: #000;
 }
 
@@ -27,7 +32,7 @@ p {
     width: 100%;
 }
 .colorfisioesteticspa {
-    background-color: #23315e;
+    background-color: $colorFisio2
 }
 
 

@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/* Estilos SASS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #96aedd;
+  color: #000;
+}
+
+h1 {
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+p {
+  margin-left: 20px;
+}
+
+/* Pisado de Bootstrap */
+.logobanner {
+  height: 150px;
+}
+
+.sidebarInicio {
+  width: 100%;
+}
+
+.colorfisioesteticspa {
+  background-color: #23315e;
+}
+
+/* Diseño de páginas hecho con Grids */
+.contenedor {
+  width: 100%;
+  max-width: 2000px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "header header header" "contenido contenido sidebar" "contenido contenido sidebar" "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .contenido .contenedor .sidebar .contenidor .footer {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.contenedor .header {
+  background: #23315e;
+  color: #fff;
+  grid-area: header;
+}
+
+.contenedor .contenido {
+  grid-area: contenido;
+}
+
+.contenedor .sidebar {
+  grid-column: 3/4;
+  background: #23315e;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  min-height: 100px;
+  grid-area: sidebar;
+}
+
+.contenedor .footer {
+  background: #23315e;
+  grid-area: footer;
+}
+
+footer {
+  background: #23315e;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive disposición de páginas*/
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-areas: "header header header" "contenido contenido contenido" "sidebar sidebar sidebar" "footer footer footer";
+  }
+}
+/* CSS de la galería (hecha con Flexbox)*/
+.gallery {
+  width: 100%;
+  border: 5px groove #23315e;
+}
+
+.fila {
+  display: flex;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.columna {
+  flex: 25%;
+}
+
+.columna .gallery {
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Media Queries adicionales (para la galería) */
+@media (max-width: 1000px) {
+  .columna {
+    flex: 30%;
+  }
+}
+@media (max-width: 800px) {
+  .columna {
+    flex: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .columna {
+    flex: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */
